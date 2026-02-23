@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["...", "nodejs"]
+
+[phases.build]
+cmds = ["npm install", "npm run build"]
+
+[start]
+cmd = "npm run start"
+# This forces Nixpacks to disregard the static/caddy plan
+plan = "node"
